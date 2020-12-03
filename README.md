@@ -19,6 +19,12 @@ $ yarn start
 $ yarn generate
 ```
 
+## Netlify CMS Backend proxy
+
+`
+npx netlify-cms-proxy-server
+`
+
 ## References
 
 * [Nuxt i18n external JSON setup](https://phrase.com/blog/posts/nuxt-js-tutorial-i18n/#External_JSON_or_JS_Files)

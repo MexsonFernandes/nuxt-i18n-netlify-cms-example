@@ -21,25 +21,25 @@ i18n:
   default_locale: en
 
 collections:
-  - name: i18n-content
-    label: i18n Content
+  - name: page
+    label: Pages
     folder: locales/
-    file: content/settings.json
     create: true
-    extension: md
+    extension: json
     i18n: true
-    slug: '{{slug}}'
     fields:
-        - widget: string
-          name: key
-          label: Key
-          required: true
-          hint: >-
-            Key of the content
-        - widget: string
-          name: value
-          label: Value
-          required: true
-          i18n: true
-          hint: >-
-            Value of the content
+      - label: Page Name
+        name: title
+        widget: string
+        required: true
+        i18n: duplicate
+        hint: This field requires section of the i18n content
+      - label: i18n Content
+        name: i18n
+        collapsed: false
+        widget: list
+        i18n: true
+        fields:
+          - {label: Key, name: key, i18n: false, widget: string }
+          - {label: Value, name: value, i18n: true, widget: string }
+      
