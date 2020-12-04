@@ -1,5 +1,3 @@
-import i18n from './config/i18n'
-
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
@@ -30,23 +28,24 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/tailwindcss',
-    [
-      'nuxt-i18n',
+    'nuxt-i18n',
+    '~/modules/nuxtI18nNetlifyCms',
+  ],
+
+  i18n: {
+    defaultLocale: 'en',
+    vueI18nLoader: true,
+    locales: [
       {
-        defaultLocale: 'en',
-        vueI18nLoader: true,
-        locales: [
-          {
-            code: 'en',
-            name: 'English',
-          },
-          {
-            code: 'fr',
-            name: 'Français',
-          },
-        ],
-        vueI18n: i18n,
+        code: 'en',
+        name: 'English',
+      },
+      {
+        code: 'fr',
+        name: 'Français',
       },
     ],
-  ],
+    vueI18n: {},
+    netlifyCmsProxyServer: true,
+  },
 }
