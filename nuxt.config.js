@@ -46,6 +46,15 @@ export default {
       },
     ],
     vueI18n: {},
-    netlifyCmsProxyServer: true,
+    netlifyCms: {
+      proxy: true,
+      route: 'admin',
+      title: 'i18n Content Management',
+      config: {
+        publish_mode: 'editorial_workflow',
+        media_folder: 'static/i18n/images',
+        public_folder: '/i18n/images',
+      },
+    },
   },
 }
